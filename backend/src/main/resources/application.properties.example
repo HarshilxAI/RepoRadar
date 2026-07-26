@@ -1,0 +1,10 @@
+# Render assigns PORT automatically; 8080 is used locally.
+PORT=8080
+GITHUB_API_URL=https://api.github.com
+# Optional but strongly recommended in production to increase GitHub API quota.
+GITHUB_TOKEN=
+GITHUB_CONNECT_TIMEOUT_SECONDS=8
+GITHUB_READ_TIMEOUT_SECONDS=15
+# Comma-separated browser origins. Wildcards are safe for local development only.
+# In production, set exact origins such as https://your-app.vercel.app
+CORS_ALLOWED_ORIGINS=http://localhost:*,http://127.0.0.1:*

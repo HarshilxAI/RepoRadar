@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-canvas font-sans text-slate-800 antialiased transition-colors duration-300; }
+  button, a, input { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral focus-visible:ring-offset-2; }
+}
+
+@layer components {
+  .surface { @apply rounded-2xl border border-slate-200/80 bg-white shadow-card; }
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.16em] text-teal; }
+  .section-title { @apply text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl; }
+  .muted { @apply text-sm leading-6 text-slate-600; }
+}
+
+/* Shared dark theme tokens. Keeping these in one place prevents individual
+   pages from drifting as the product grows. */
+.dark body { background: #101216; color: #e9e4dc; }
+.dark .surface { background: #1a1b20; border-color: #2b2d34; box-shadow: 0 14px 30px rgb(0 0 0 / 0.25); }
+.dark .bg-white { background-color: #1a1b20 !important; }
+.dark .bg-canvas { background-color: #101216 !important; }
+.dark .bg-slate-50, .dark .bg-slate-50\/70 { background-color: #15171b !important; }
+.dark .bg-slate-100 { background-color: #24252b !important; }
+.dark .border-slate-200, .dark .border-slate-200\/70, .dark .border-slate-200\/80 { border-color: #2b2d34 !important; }
+.dark .border-slate-100 { border-color: #2b2d34 !important; }
+.dark .text-slate-950, .dark .text-slate-900, .dark .text-slate-800 { color: #f1f5f9 !important; }
+.dark .text-slate-700 { color: #d1d5db !important; }
+.dark .text-slate-600, .dark .text-slate-500 { color: #9ca9bb !important; }
+.dark .text-slate-400 { color: #8491a5 !important; }
+.dark .text-teal { color: #d3a267 !important; }
+.dark .bg-teal { background-color: #b7834e !important; }
+.dark .border-teal { border-color: #b7834e !important; }
+.dark .bg-teal\/10 { background-color: rgb(211 162 103 / 0.12) !important; }
+.dark .hover\:bg-slate-50:hover { background-color: #1e293b !important; }
+.dark .hover\:bg-white:hover { background-color: #1e293b !important; }
+.dark .focus-visible\:ring-offset-2:focus-visible { --tw-ring-offset-color: #101216; }
+.dark input::placeholder { color: #718096; }
