@@ -6,12 +6,11 @@ RepoRadar is a production-ready developer productivity application that turns pu
 
 It has no accounts, database, stored reports, or direct browser-to-GitHub calls. Paste a public repository URL and receive an analysis in seconds.
 
-## Screenshots
+##  Live Demo
 
-Screenshots can be added here after the public deployment is available:
+**Try RepoRadar:** https://repo-radar-23.vercel.app/
 
-- Landing page — repository URL input and feature overview
-- Dashboard — health score, metrics, language chart, and recommendations
+Analyze any public GitHub repository directly from your browser—no sign-up or installation required.
 
 ## Features
 
@@ -53,10 +52,10 @@ See the detailed [architecture documentation](docs/architecture.md).
 
 ```text
 RepoRadar/
-├── backend/     # independently runnable Spring Boot API
-├── frontend/    # independently runnable Vite application
-├── docs/        # architecture, API, deployment, roadmap documents
-├── render.yaml  # Render Blueprint configuration
+├── backend/     
+├── frontend/   
+├── docs/        
+├── render.yaml  
 ├── LICENSE
 └── README.md
 ```
@@ -128,7 +127,6 @@ Windows PowerShell:
 ```powershell
 cd frontend
 Copy-Item .env.example .env
-# Edit .env and set VITE_API_BASE_URL=http://localhost:8080
 npm install
 npm run dev
 ```
@@ -138,7 +136,6 @@ macOS/Linux:
 ```bash
 cd frontend
 cp .env.example .env
-# Edit .env and set VITE_API_BASE_URL=http://localhost:8080
 npm install
 npm run dev
 ```
@@ -184,6 +181,19 @@ npm run preview
 | `VITE_API_BASE_URL` | Yes | Full backend base URL; use `http://localhost:8080` locally and your HTTPS Render URL in production. |
 
 Never put `GITHUB_TOKEN` in a Vite variable: browser variables are public after build.
+
+## Built With
+
+RepoRadar is built using:
+
+- GitHub REST API
+- Spring Boot
+- React
+- Vite
+- Tailwind CSS
+- Chart.js
+- Lucide
+- jsPDF
 
 ## API Documentation
 
@@ -266,6 +276,8 @@ Suggested commit history: `Initial project setup`, `Backend architecture`, `GitH
 
 Released under the [MIT License](LICENSE).
 
-## Acknowledgements
+---
 
-Built with the GitHub REST API, Spring Boot, React, Vite, Tailwind CSS, Chart.js, Lucide, and jsPDF.
+<p align="center">
+  <strong>© 2026 Harshil Gurjar. All Rights Reserved.</strong>
+</p>
